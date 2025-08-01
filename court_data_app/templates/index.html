@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Court Data Fetcher - Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-screen p-8">
+  <div class="max-w-xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
+      <h1 class="text-xl font-bold text-white flex items-center">
+        <i class="fas fa-building mr-2"></i>
+        Court Data Fetcher
+      </h1>
+      <p class="text-sm text-white opacity-80">Delhi High Court / eCourt Portal</p>
+    </div>
+
+    <form method="POST" class="p-6 space-y-6">
+      <!-- Case Type -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Case Type *</label>
+        <select name="case_type" required
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+          <option value="">Select Case Type</option>
+          <option value="Civil Appeal">Civil Appeal</option>
+          <option value="Criminal Appeal">Criminal Appeal</option>
+          <option value="Writ Petition">Writ Petition</option>
+          <option value="Criminal Misc. Case">Criminal Misc. Case</option>
+          <option value="Civil Misc. Case">Civil Misc. Case</option>
+          <option value="Contempt Petition">Contempt Petition</option>
+          <option value="Company Petition">Company Petition</option>
+        </select>
+      </div>
+
+      <!-- Case Number -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Case Number *</label>
+        <input type="text" name="case_number" placeholder="e.g., 2567"
+               required
+               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <!-- Filing Year -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Filing Year</label>
+        <select name="filing_year"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+              class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2">
+        <i class="fas fa-search"></i>
+        <span>Search Case</span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
